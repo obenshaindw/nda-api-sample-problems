@@ -27,6 +27,7 @@ r = requests.post('https://ndar.nih.gov/api/search/nda_sw_removal/dataelement/fu
                   data= query_phrase)
                   
 search_results = json.loads(r.text)
+
 data_elements = search_results['datadict']
 
 print(data_elements)
