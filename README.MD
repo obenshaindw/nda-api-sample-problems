@@ -1,9 +1,9 @@
-Using the NIMH Data Archive search API perform the following tasks.
-===================================================================
+Using the NIMH Data Archive search API perform the following tasks
+==================================================================
 
 # Problem 1:
 
-Using the 'full' search operation from the search API, identify the data elements scoring > 0.33 for an arbitrary query term (i.e., depression) that include the query term in the description and/or notes field.
+Using the 'full' search operation from the search API, identify the data elements scoring > 0.33 for an arbitrary query term (i.e., depression) that include the query term in the description and/or notes field. To complete this and subsequent problems I should be able to use any query phrase.
 
 You should use the nda_sw_removal index for this search, and the type should be dataelement. 
 
@@ -25,8 +25,10 @@ query_phrase = 'depression'
 r = requests.post('https://ndar.nih.gov/api/search/nda_sw_removal/dataelement/full?size=5',
                   headers={'Accept':'application/json'},
                   data= query_phrase)
+                  
 search_results = json.loads(r.text)
 data_elements = search_results['datadict']
+
 print(data_elements)
 
 # Problem 2:
@@ -48,6 +50,7 @@ You can explore the API interactively using the swagger interface at https://nda
 You should be using the GET HTTP method and the following URLs to solve this problem:
 
 GET https://ndar.nih.gov/api/datadictionary/v2/datastructure/{shortName}/changes
+
 GET https://ndar.nih.gov/api/datadictionary/v2/dataelement/{elementName}/changes
 
 
