@@ -34,7 +34,7 @@ print(data_elements)
 
 # Problem 2:
 
-For data elements meeting the search criteria in Problem 1 (score > 0.33 with query phrase in notes and/or description), calculate total subjectCount from data structures containing those data elements and least each data structure with its count.
+For data elements meeting the search criteria in Problem 1 (score > 0.33 with query phrase in notes and/or description), calculate total subjectCount from data structures containing those data elements and list each data structure with its count.
 
 NOTES: 
 - The data structures should be unique (i.e., if a dataStructure shows up more than once, you should only list it once).
